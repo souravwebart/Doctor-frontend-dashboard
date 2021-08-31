@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="mobile.css">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <title>Doctor App</title>
+</head>
+
+<body>
+  <div class="navheader">
+    <div class="headernav">
+      <div class="logo-brand">
+        <img src="./images/logo.png" alt="logo">
+        <h1>Doctor24X7</h1>
+      </div>
+      <div class="brand">
+        <button onclick="openMenunav()">
+          &#9776;
+        </button>
+      </div>
+    </div>
+  </div>
+  <aside class="sidebar-nav">
+    <button class="sidebar-close-button" onclick="closeMenunav()">X</button>
+    <ul>
+      <li>
+        <a href="doctor.html">Doctor</a>
+      </li>
+      <li>
+        <a href="staff.html">Staff</a>
+      </li>
+      <li>
+        <a href="admin.html">Admin</a>
+      </li>
+    </ul>
+  </aside>
+  <div class="main">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-lg-6">
+          <div class="headingtop">
+            <h1>Talk to Specialist doctor Online</h1>
+            <h2>On private chat and Call, 24X7</h2>
+            <p>Consult Doctors from top hospitals within 30 minutes</p>
+            <a href="#">Talk to Doctor</a>
+          </div>
+        </div>
+        <div class="col-12 col-lg-6">
+          <div class="hometopimage">
+            <img src="./images/banner.png" alt="image">
+          </div>
+        </div>
+        <div class="col-12 col-lg-4">
+          <form class="form-start">
+            <div class="formimg">
+              <img src="./images/doctor.png" alt="doctor">
+            </div>
+            <div class="headintext">
+              <h1>Login For Doctor</h1>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                placeholder="Enter email">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+            </div>
+            <div class="form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">You aggree to Our Privacy Policy. *</label>
+            </div>
+            <div class="form-button">
+              <button type="submit" class="form-button-login">Login</button>
+              <a class="form-button-signup" href="/Signup.html">Sign Up</a>
+            </div>
+          </form>
+        </div>
+        <div class="col-12 col-lg-4">
+          <form class="form-start">
+            <div class="formimg">
+              <img src="./images/patient.png" alt="doctor">
+            </div>
+            <div class="headintext">
+              <h1>Login For Staff</h1>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                placeholder="Enter email">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+            </div>
+            <div class="form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">You aggree to Our Privacy Policy. *</label>
+            </div>
+            <div class="form-button">
+              <button type="submit" class="form-button-login">Login</button>
+              <a class="form-button-signup" href="/Signup.html">Sign Up</a>
+            </div>
+          </form>
+        </div>
+        <div class="col-12 col-lg-4">
+          <form class="form-start">
+            <div class="formimg">
+              <img src="./images/logo.png" alt="doctor">
+            </div>
+            <div class="headintext">
+              <h1>Login For Admin</h1>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                placeholder="Enter email">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+            </div>
+            <div class="form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">You aggree to Our Privacy Policy. *</label>
+            </div>
+            <div class="form-button">
+              <button type="submit" class="form-button-login">Login</button>
+              <a class="form-button-signup" href="/Signup.html">Sign Up</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="dashboarddemo">
+      <div class="admindashboard">
+        <a href="/admin.html"><img src="./images/admin.png" alt="admin"></a>
+      </div>
+      <div class="staffdashboard">
+        <a href="/staff.html"><img src="./images/staff.png" alt="staff"></a>
+      </div>
+      <div class="doctordashboard">
+        <a href="/doctor.html"><img src="./images/doctordashboard.PNG" alt="doctor"></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="footer-text">
+      <h1>Copyright @2021 Design and Development By Sourav</h1>
+    </div>
+  </div>
+  <script>
+    function openMenunav() {
+      document.querySelector(".sidebar-nav").classList.add("open");
+    }
+
+    function closeMenunav() {
+      document.querySelector(".sidebar-nav").classList.remove('open');
+    }
+  </script>
+  <script src="/js/bootstrap.min.js"></script>
+</body>
+
+</html>

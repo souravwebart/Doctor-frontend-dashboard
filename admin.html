@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/billboard.js/dist/billboard.min.css" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mobile.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <title>Doctor</title>
+</head>
+
+<body>
+    <div class="headerbar">
+        <div class="container-fluid">
+            <div class="row">
+                <header class="header">
+                    <div class="brand">
+                        <button onclick="openMenu()">
+                            &#9776;
+                        </button>
+                        <h1><a href="/">Doctor24X7</a></h1>
+                    </div>
+                    <div class="header-links">
+                        <h1 onclick="openChat()"><i class="fas fa-comments"></i></h1>
+                        <h1 onclick="openNotification()"><i class="fas fa-bell"></i></h1>
+                        <div class="profileblock">
+                            <div class="profilename">
+                                <h2>Sourav Gupta</h2>
+                            </div>
+                            <div class="profilelogo">
+                                <img src="./images/souravguptaprofile1.png" alt="admin">
+                            </div>
+                        </div>
+                    </div>
+                </header>
+            </div>
+        </div>
+    </div>
+    <aside class="sidebar">
+        <button class="sidebar-close-button" onclick="closeMenu()">X</button>
+        <h3>Dashboard</h3>
+        <h1>Recover: 54</h1>
+        <p>Active: 62</p>
+        <ul>
+            <li>
+                <a href="#">My profile</a>
+            </li>
+            <li>
+                <a href="#">Cases Report</a>
+            </li>
+            <li>
+                <a href="#">Add Staff</a>
+            </li>
+            <li>
+                <a href="#">Add Doctor</a>
+            </li>
+            <li>
+                <a href="#">Patient List</a>
+            </li>
+        </ul>
+    </aside>
+    <aside class="wrapper-chat">
+        <div class="main-chat">
+            <button class="main-chat-close-button" onclick="closeChat()"><i class="fas fa-chevron-right"></i></button>
+            <div class="px-2 scroll">
+                <div class="d-flex align-items-center">
+                    <div class="text-left pr-1"><img src="./images/patient.png" width="30" class="img1" /></div>
+                    <div class="pr-2 pl-1"> <span class="name">Sarah Anderson</span>
+                        <p class="msg">Hi Dr. Hendrikson, I haven't been falling well for past few days.</p>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center text-right justify-content-end ">
+                    <div class="pr-2"> <span class="name">Dr. Hendrikson</span>
+                        <p class="msg">Let's jump on a video call</p>
+                    </div>
+                    <div><img src="./images/doctor.png" width="30" class="img1" /></div>
+                </div>
+                <div class="text-center"><span class="between">Call started at 10:47am</span></div>
+                <div class="text-center"><span class="between">Call ended at 11:03am</span></div>
+                <div class="d-flex align-items-center">
+                    <div class="text-left pr-1"><img src="./images/patient.png" width="30" class="img1" /></div>
+                    <div class="pr-2 pl-1"> <span class="name">Sarah Anderson</span>
+                        <p class="msg">How often should i take this?</p>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center text-right justify-content-end ">
+                    <div class="pr-2"> <span class="name">Dr. Hendrikson</span>
+                        <p class="msg">Twice a day, at breakfast and before bed</p>
+                    </div>
+                    <div><img src="./images/doctor.png" width="30" class="img1" /></div>
+                </div>
+                <div class="d-flex align-items-center">
+                    <div class="text-left pr-1"><img src="./images/patient.png" width="30" class="img1" /></div>
+                    <div class="pr-2 pl-1"> <span class="name">Sarah Anderson</span>
+                        <p class="msg">How often should i take this?</p>
+                    </div>
+                </div>
+            </div>
+            <nav class="navbar bg-white navbar-expand-sm d-flex justify-content-between"> <input type="text number" name="text" class="form-control" placeholder="Type a message...">
+                <div class="icondiv d-flex justify-content-end align-content-center text-center ml-2"> <i class="fa fa-paperclip icon1"></i> <i class="fa fa-arrow-circle-right icon2"></i> </div>
+            </nav>
+        </aside>
+    <aside class="sidebar-notification">
+        <button class="sidebar-notification-close-button" onclick="closeNotification()"><i
+                class="fas fa-chevron-right"></i></button>
+        <ul>
+            <li>
+                <div class="doctor-notify">
+                    <div class="notification-heading">
+                        <h1>Rx</h1>
+                    </div>
+                    <div class="notification-time">
+                        <h2>Ms. Shukla Booked slot</h2>
+                        <p>26 Oct, 2021 11:00AM</p>
+                    </div>
+                </div>
+
+            </li>
+            <li>
+                <div class="doctor-notify">
+                    <div class="notification-heading">
+                        <h1>Rx</h1>
+                    </div>
+                    <div class="notification-time">
+                        <h2>Mr. jhon Appoinment over</h2>
+                        <p>26 Oct, 2021 11:00AM</p>
+                    </div>
+                </div>
+
+            </li>
+            <li>
+                <div class="doctor-notify">
+                    <div class="notification-heading">
+                        <h1>Rx</h1>
+                    </div>
+                    <div class="notification-time">
+                        <h2>Ms. Shukla Booked slot</h2>
+                        <p>26 Oct, 2021 11:00AM</p>
+                    </div>
+                </div>
+
+            </li>
+            <li>
+                <div class="doctor-notify">
+                    <div class="notification-heading">
+                        <h1>Rx</h1>
+                    </div>
+                    <div class="notification-time">
+                        <h2>Ms. Shukla Booked slot</h2>
+                        <p>26 Oct, 2021 11:00AM</p>
+                    </div>
+                </div>
+
+            </li>
+
+        </ul>
+    </aside>
+
+    <div class="maindoctor">
+        <div class="container">
+            <div class="row">
+                <div class="doctor-headerbar">
+                    <div class="doctor-details-header">
+                        <a href="#"><span><i class="far fa-clock"></i></span>Edit Profile</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-8 doctor-page">
+                    <div class="staff-graph">
+                        <canvas id="barChart"></canvas>
+                    </div>
+                    <div class="patient-record-details">
+                        <div class="Appoinment-record1">
+                            <div class="record-icon">
+                                <h1><i class="far fa-calendar-alt"></i></h1>
+                            </div>
+                          <div class="record-details">
+                            <h1>Appoinment</h1>
+                            <p>175</p>
+                          </div>
+                        </div>
+                        <div class="Appoinment-record2">
+                            <div class="record-icon">
+                                <h1><i class="fas fa-user-nurse"></i></h1>
+                            </div>
+                          <div class="record-details">
+                            <h1>Total Patient</h1>
+                            <p>880K</p>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="patient-record-details">
+                        <div class="Appoinment-record3">
+                            <div class="record-icon">
+                                <h1><i class="fas fa-hand-holding-usd"></i></h1>
+                            </div>
+                          <div class="record-details">
+                            <h1>HOSPITAL EARNING</h1>
+                            <p>175 Cr</p>
+                          </div>
+                        </div>
+                        <div class="Appoinment-record4">
+                            <div class="record-icon">
+                                <h1><i class="fas fa-user-md"></i></h1>
+                            </div>
+                          <div class="record-details">
+                            <h1>Total Doctor</h1>
+                            <p>525</p>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="patient-booking-form">
+                        <form>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="control-label" for="name">Name</label>
+                                        <input id="name" name="name" type="text" placeholder="Name" class="form-control input-md">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="control-label" for="email">Email</label>
+                                        <input id="email" name="email" type="text" placeholder="E-Mail" class="form-control input-md">
+                                    </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="form-group">
+                                        <label class="control-label" for="name">Full address</label>
+                                        <input id="address" name="address" type="text" placeholder="address" class="form-control input-md">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label class="control-label" for="name">City</label>
+                                        <input id="city" name="email" type="text" placeholder="city" class="form-control input-md">
+                                    </div>
+                                </div>
+                               
+                                <div class="col-md-6">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                                        <label class="form-check-label" for="exampleRadios1">
+                                          Male
+                                        </label>
+                                      </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                                        <label class="form-check-label" for="exampleRadios1">
+                                          Female
+                                        </label>
+                                      </div>
+                                </div>
+                               
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="control-label" for="date">Preferred Date</label>
+                                        <input id="date" name="date" type="text" placeholder="Preferred Date" class="form-control input-md">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="control-label" for="time">Age</label>
+                                        <select id="time" name="time" class="form-control">
+                                            <option value="00 to 18">00 to 18</option>
+                                            <option value="19 to 40">19 to 40</option>
+                                            <option value="41 to 60">41 to 60</option>
+                                            <option value="61 to 80">61 to 80</option>
+                                            <option value="81+">81+</option>
+
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label class="control-label" for="time">Preferred Time</label>
+                                        <select id="time" name="time" class="form-control">
+                                            <option value="8:00 to 9:00">8:00 to 9:00</option>
+                                            <option value="9:00 to 10:00">9:00 to 10:00</option>
+                                            <option value="10:00 to 1:00">10:00 to 1:00</option>
+                                            <option value="1:00 to 2:00">1:00 to 2:00</option>
+                                            <option value="2:00 to 3:00">2:00 to 3:00</option>
+                                            <option value="3:00 to 4:00">3:00 to 4:00</option>
+
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label class="control-label" for="appointmentfor">Appointment For</label>
+                                        <select id="appointmentfor" name="appointmentfor" class="form-control">
+                                            <option value="Service#1">Service#1</option>
+                                            <option value="Service#2">Service#2</option>
+                                            <option value="Service#3">Service#3</option>
+                                            <option value="Service#4">Service#4</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-button">
+                                        <button type="submit" class="form-button-login">Book appoinment</button>
+                                      </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="patient-activity">
+                        <h1>Recent Patient Activity</h1>
+                        <hr>
+                    </div>
+                    <div class="recent-patient-activity">
+                        <div class="recent-patient-details">
+                            <div class="recent-patient-image">
+                                <img src="./images/patient.png" alt="patient">
+                                <h1>Mr. Jhon </h1>
+                            </div>
+                            <div class="recent-patient-disease">
+                                <h1>Disease</h1>
+                                <p>Allergies & Asthma</p>
+                            </div>
+                            <div class="recent-patient-status">
+                                <h1>Status</h1>
+                                <p>Recovered</p>
+                                <h2>22/08/2021 12:34 AM</h2>
+                            </div>
+                        </div>
+                        <div class="recent-patient-details">
+                            <div class="recent-patient-image">
+                                <img src="./images/patient.png" alt="patient">
+                                <h1>Mr. Jhon </h1>
+                            </div>
+                            <div class="recent-patient-disease">
+                                <h1>Disease</h1>
+                                <p>Allergies & Asthma</p>
+                            </div>
+                            <div class="recent-patient-status">
+                                <h1>Status</h1>
+                                <p>Recovered</p>
+                                <h2>22/08/2021 12:34 AM</h2>
+                            </div>
+                        </div>
+                        <div class="recent-patient-details">
+                            <div class="recent-patient-image">
+                                <img src="./images/patient.png" alt="patient">
+                                <h1>Mr. Jhon </h1>
+                            </div>
+                            <div class="recent-patient-disease">
+                                <h1>Disease</h1>
+                                <p>Allergies & Asthma</p>
+                            </div>
+                            <div class="recent-patient-status">
+                                <h1>Status</h1>
+                                <p>Recovered</p>
+                                <h2>22/08/2021 12:34 AM</h2>
+                            </div>
+                        </div>
+                        <div class="recent-patient-details">
+                            <div class="recent-patient-image">
+                                <img src="./images/patient.png" alt="patient">
+                                <h1>Mr. Jhon </h1>
+                            </div>
+                            <div class="recent-patient-disease">
+                                <h1>Disease</h1>
+                                <p>Allergies & Asthma</p>
+                            </div>
+                            <div class="recent-patient-status">
+                                <h1>Status</h1>
+                                <p>Recovered</p>
+                                <h2>22/08/2021 12:34 AM</h2>
+                            </div>
+                        </div>
+                        <div class="recent-patient-details">
+                            <div class="recent-patient-image">
+                                <img src="./images/patient.png" alt="patient">
+                                <h1>Mr. Jhon </h1>
+                            </div>
+                            <div class="recent-patient-disease">
+                                <h1>Disease</h1>
+                                <p>Allergies & Asthma</p>
+                            </div>
+                            <div class="recent-patient-status">
+                                <h1>Status</h1>
+                                <p>Recovered</p>
+                                <h2>22/08/2021 12:34 AM</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-4">
+                    <div class="patients-online">
+                        <div class="onlineavailable-patient">
+                            <div class="available-patient-image">
+                                <img src="./images/user.jpg" alt="user">
+                            </div>
+                            <div class="online-available-patient-details-name">
+                                <h1>MS. Brian</h1>
+                                <p>Diabatic Disease</p>
+                            </div>
+                            <div class="Patient-waiting">
+                                <p>Waiting</p>
+                            </div>
+                        </div>
+                        <div class="onlineavailable-patient">
+                            <div class="available-patient-image">
+                                <img src="./images/user.jpg" alt="user">
+                            </div>
+                            <div class="online-available-patient-details-name">
+                                <h1>MS. Brian</h1>
+                                <p>Diabatic Disease</p>
+                            </div>
+                            <div class="Patient-accepted">
+                                <p>Completed</p>
+                            </div>
+                        </div>
+                        <div class="onlineavailable-patient">
+                            <div class="available-patient-image">
+                                <img src="./images/user.jpg" alt="user">
+                            </div>
+                            <div class="online-available-patient-details-name">
+                                <h1>MS. Brian</h1>
+                                <p>Diabatic Disease</p>
+                            </div>
+                            <div class="Patient-waiting">
+                                <p>Waiting</p>
+                            </div>
+                        </div>
+                        <div class="onlineavailable-patient">
+                            <div class="available-patient-image">
+                                <img src="./images/user.jpg" alt="user">
+                            </div>
+                            <div class="online-available-patient-details-name">
+                                <h1>MS. Brian</h1>
+                                <p>Diabatic Disease</p>
+                            </div>
+                            <div class="Patient-accepted">
+                                <p>Completed</p>
+                            </div>
+                        </div>
+                        <div class="onlineavailable-patient">
+                            <div class="available-patient-image">
+                                <img src="./images/user.jpg" alt="user">
+                            </div>
+                            <div class="online-available-patient-details-name">
+                                <h1>MS. Brian</h1>
+                                <p>Diabatic Disease</p>
+                            </div>
+                            <div class="Patient-accepted">
+                                <p>Completed</p>
+                            </div>
+                        </div>
+                        <div class="onlineavailable-patient">
+                            <div class="available-patient-image">
+                                <img src="./images/user.jpg" alt="user">
+                            </div>
+                            <div class="online-available-patient-details-name">
+                                <h1>MS. Brian</h1>
+                                <p>Diabatic Disease</p>
+                            </div>
+                            <div class="Patient-waiting">
+                                <p>Waiting</p>
+                            </div>
+                        </div>
+                        <div class="onlineavailable-patient">
+                            <div class="available-patient-image">
+                                <img src="./images/user.jpg" alt="user">
+                            </div>
+                            <div class="online-available-patient-details-name">
+                                <h1>MS. Brian</h1>
+                                <p>Diabatic Disease</p>
+                            </div>
+                            <div class="Patient-accepted">
+                                <p>Completed</p>
+                            </div>
+                        </div>
+                        <div class="onlineavailable-patient">
+                            <div class="available-patient-image">
+                                <img src="./images/user.jpg" alt="user">
+                            </div>
+                            <div class="online-available-patient-details-name">
+                                <h1>MS. Brian</h1>
+                                <p>Diabatic Disease</p>
+                            </div>
+                            <div class="Patient-waiting">
+                                <p>Waiting</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="doctor-list">
+                        <h1>Doctor List</h1>
+                        <hr>
+                    </div>
+                    <div class="patients-online">
+                        <div class="onlineavailable-patient">
+                           <div class="online-available-patient-details-name">
+                             <div class="available-patient-image">
+                                <img src="./images/user.jpg" alt="user">
+                            </div>
+                        </div>
+                            <div class="online-available-patient-details-name">
+                                <h1>MS. Brian</h1>
+                                <p>MBBS, MD Specialist</p>
+                            </div>
+                            <div class="Patient-waiting">
+                                <p><i class="fas fa-edit"></i></p>
+                                <p><i class="fas fa-trash-alt"></i></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="patients-online">
+                        <div class="onlineavailable-patient">
+                           <div class="online-available-patient-details-name">
+                             <div class="available-patient-image">
+                                <img src="./images/user.jpg" alt="user">
+                            </div>
+                        </div>
+                            <div class="online-available-patient-details-name">
+                                <h1>MS. Brian</h1>
+                                <p>MBBS, MD Specialist</p>
+                            </div>
+                            <div class="Patient-waiting">
+                                <p><i class="fas fa-edit"></i></p>
+                                <p><i class="fas fa-trash-alt"></i></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="patients-online">
+                        <div class="onlineavailable-patient">
+                           <div class="online-available-patient-details-name">
+                             <div class="available-patient-image">
+                                <img src="./images/user.jpg" alt="user">
+                            </div>
+                        </div>
+                            <div class="online-available-patient-details-name">
+                                <h1>MS. Brian</h1>
+                                <p>MBBS, MD Specialist</p>
+                            </div>
+                            <div class="Patient-waiting">
+                                <p><i class="fas fa-edit"></i></p>
+                                <p><i class="fas fa-trash-alt"></i></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="patients-online">
+                        <div class="onlineavailable-patient">
+                           <div class="online-available-patient-details-name">
+                             <div class="available-patient-image">
+                                <img src="./images/user.jpg" alt="user">
+                            </div>
+                        </div>
+                            <div class="online-available-patient-details-name">
+                                <h1>MS. Brian</h1>
+                                <p>MBBS, MD Specialist</p>
+                            </div>
+                            <div class="Patient-waiting">
+                                <p><i class="fas fa-edit"></i></p>
+                                <p><i class="fas fa-trash-alt"></i></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer-text">
+            <h1>Copyright @2021 Design and Development By Sourav</h1>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.2.2/Chart.min.js"></script>
+
+    <script>
+        function openMenu() {
+            document.querySelector(".sidebar").classList.add("open");
+        }
+
+        function closeMenu() {
+            document.querySelector(".sidebar").classList.remove('open');
+        }
+    </script>
+    <script>
+        function openNotification() {
+            document.querySelector(".sidebar-notification").classList.add("open");
+        }
+
+        function closeNotification() {
+            document.querySelector(".sidebar-notification").classList.remove('open');
+        }
+    </script>
+    <script>
+        function openChat() {
+            document.querySelector(".wrapper-chat").classList.add("open");
+        }
+
+        function closeChat() {
+            document.querySelector(".wrapper-chat").classList.remove('open');
+        }
+    </script>
+    <script>
+        var ctxB = document.getElementById("barChart").getContext('2d');
+var myBarChart = new Chart(ctxB, {
+type: 'bar',
+data: {
+labels: ["Sunday", "Monday", "tuesday", "Wednesday", "Thursday", "Friday", "saturday"],
+datasets: [{
+label: 'Weekly data of Patients',
+data: [12, 19, 8, 15, 12, 9, 17],
+backgroundColor: [
+'rgba(255, 99, 132)',
+'rgba(54, 162, 235)',
+'rgba(255, 206, 86)',
+'rgba(75, 192, 192)',
+'rgba(153, 102, 255)',
+'rgba(255, 159, 64)',
+'rgba(0, 255, 0)'
+],
+borderColor: [
+'rgba(255,99,132,1)',
+'rgba(54, 162, 235, 1)',
+'rgba(255, 206, 86, 1)',
+'rgba(75, 192, 192, 1)',
+'rgba(153, 102, 255, 1)',
+'rgba(255, 159, 64, 1)',
+'rgba(0, 255, 0, 1)'
+],
+borderWidth: 1
+}]
+},
+options: {
+scales: {
+yAxes: [{
+ticks: {
+beginAtZero: true
+}
+}]
+}
+}
+});
+    </script>
+    <script>
+        var ctx = document.getElementById("myChart").getContext("2d");
+        var myChart = new Chart(ctx, {
+            type: "line",
+            data: {
+                labels: [
+                    "Monday",
+                    "Tuesday",
+                    "Wednesday",
+                    "Thursday",
+                    "Friday",
+                    "Saturday",
+                    "Sunday",
+                ],
+                datasets: [{
+                        label: "Accepted",
+                        data: [2, 9, 3, 17, 6, 3, 7],
+                        backgroundColor: "rgba(95, 238, 51, 0.274)",
+                    },
+                    {
+                        label: "Rejected",
+                        data: [2, 2, 5, 5, 2, 1, 10],
+                        backgroundColor: "rgba(221, 75, 7, 0.467)",
+                    },
+                ],
+            },
+        });
+    </script>
+</body>
+
+</html>

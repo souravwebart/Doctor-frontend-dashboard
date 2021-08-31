@@ -1,0 +1,127 @@
+@media only screen and (max-width:776px){
+  .brand a {
+    display: none;
+  }
+  .header-links h1 {
+    display: block;
+    font-size: 15px;
+    padding-right: 8px;
+    color: #00A62C;
+    font-weight: 600;
+}
+.patient-user-details h1 {
+  display: block;
+    font-size: 27px;
+    padding-left: 10px;
+    color: #00A62C;
+    font-weight: 600;
+    margin-top: 8px;
+}
+.patient-user-details p {
+  display: block;
+  font-size: 12px;
+  padding-left: 10px;
+  color: #383838;
+  font-weight: 600;
+}
+.patient-user-details h2 span {
+  font-size: 14px;
+  padding-left: 0px;
+  padding-right: 5px;
+  color: #383838;
+  font-weight: 600;
+}
+.patient-address-details{
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: 20px 0px;
+}
+.current-patient-profile-image{
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.patient-user-image img {
+  width: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 100%;
+  border: 5px solid #00A62C;
+}
+.Patient-accepted p {
+  font-size: 12px;
+  font-weight: bold;
+  color: rgb(9, 37, 2);
+  background-color: rgba(167, 250, 12, 0.301);
+  padding: 10px 10px;
+  border-radius: 5px;
+}
+.Patient-accepted {
+  margin-left: 0px;
+  margin-top: 10px;
+}
+.Patient-waiting p{
+  font-size: 12px;
+  font-weight: bold;
+  color: rgb(58, 58, 58);
+  background-color: rgba(34, 34, 34, 0.301);
+  padding: 10px 10px;
+  border-radius: 5px;
+}
+.Patient-waiting {
+  margin-left: 0px;
+  margin-top: 10px;
+}
+.onlineavailable-patient{
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.wrapper-chat.open {
+    transform: translateX(0px);
+}
+.wrapper-chat {
+    width: 230px;
+    border-radius: 8px;
+    position: fixed;
+    padding: 6px 0px 0px;
+    transform: translateX(340px);
+    transition: all 0.5s ease 0s;
+    background-color: rgb(255, 255, 255);
+    z-index: 99;
+    right: 0px;
+    box-shadow: rgb(110 110 110) 0px 4px 18px 0px;
+    bottom: 0px;
+}
+.patient-record-details{
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.recent-patient-details{
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+
+.dashboarddemo{
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.Signuptopimage {
+  height: min-content;
+  margin-bottom: 8%;
+  margin-top: -29%;
+}
+.signuptop {
+  padding: 30px 20px;
+  background: rgb(255 255 255 / 8%);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgb(0 0 0 / 48%);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  height: min-content;
+  margin-bottom: 40%;
+  margin-top: 15%;
+}
+}
