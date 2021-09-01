@@ -124,4 +124,18 @@
   margin-bottom: 40%;
   margin-top: 15%;
 }
+.icon2 {
+  color: #00A62C !important;
+  font-size: 18px !important;
+  position: relative;
+  left: 185px;
+  padding: 0px;
+  cursor: pointer;
+}
+.icon1 {
+  color: #00A62C !important;
+  font-size: 18px !important;
+  cursor: pointer;
+  margin-right: -15px;
+}
 }
